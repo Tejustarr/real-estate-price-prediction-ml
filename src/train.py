@@ -10,10 +10,22 @@ def train_models(X_train, y_train, preprocessor):
     Train multiple regression models and save them.
     """
 
+    # Ridge(alpha=0.01)
+    # Ridge(alpha=0.1)
+    # Ridge(alpha=10)
+
+    # Lasso(alpha=0.001)
+    # Lasso(alpha=0.01)
+    # Lasso(alpha=1)
     models = {
         "linear": LinearRegression(),
-        "ridge": Ridge(alpha=1.0),
-        "lasso": Lasso(alpha=0.1)
+        "ridge(0.01)": Ridge(alpha=0.01),
+        "ridge(0.1)": Ridge(alpha=0.1),
+        "ridge(10)": Ridge(alpha=10),
+        "lasso(0.001)": Lasso(alpha=0.001),
+        "lasso(0.01)": Lasso(alpha=0.01),
+        "lasso(0.1)": Lasso(alpha=0.1),
+        "lasso(1)": Lasso(alpha=1),
     }
 
     trained_models = {}
